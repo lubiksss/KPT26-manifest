@@ -8,11 +8,14 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        keys: [ 'hello', 'world', 'hello', 'puppeteer' ]
+        keys: [
+          'https://smartstore.naver.com/beenhoney',
+          'https://smartstore.naver.com/bsoh1118?NaPm=ct%3Dlf4qdc9d%7Cci%3Dshopn%7Ctr%3Dslsl%7Chk%3Db84fc710b7a50b13532ca539c74b88e3c01e428e%7Ctrx%3Dundefined',
+        ]
     steps:
       - uses: actions/checkout@v3
         with:
-          repository: 'lubiksss/KPT0-crawling_cli-templ'
+          repository: 'lubiksss/KPT26-smart-info'
           token: ${{ secrets.GH_TOKEN }}
       - uses: actions/setup-node@v3
         with:
